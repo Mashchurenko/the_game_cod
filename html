@@ -1,0 +1,58 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2D Platformer Boss Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="gameWrap">
+    <canvas id="game"></canvas>
+
+    <div class="hud">
+      <div class="panel" id="levelInfo">Уровень: 1</div>
+      <div class="panel" id="hpInfo">HP: 100</div>
+      <div class="panel" id="bossInfo">Босс: жив</div>
+      <div class="panel" id="collectInfo">Предметы: 0 / 0</div>
+    </div>
+
+    <div class="controls">
+      <button id="inventoryBtn">Инвентарь</button>
+      <button id="restartBtn">Рестарт</button>
+    </div>
+
+    <div id="inventoryMenu">
+      <div class="inventoryCard">
+        <div class="inventoryHead">
+          <div>
+            <h2 style="margin:0 0 6px 0;">Коллекционные предметы</h2>
+            <div style="opacity:0.8; font-size:14px;">Найденные и не найденные предметы по всем уровням</div>
+          </div>
+          <button id="closeInventoryBtn">Закрыть</button>
+        </div>
+        <div class="inventoryGrid" id="inventoryGrid"></div>
+      </div>
+    </div>
+
+    <div class="hint">A / D — движение, W / Space — прыжок, F — атака, I — инвентарь</div>
+  </div>
+
+  <!-- Музыка -->
+  <audio id="musicLevel1" loop src="https://raw.githubusercontent.com/Mashchurenko/-/main/Lalala%20lava%20%F0%9F%94%A5%20(2).mp3"></audio>
+  <audio id="musicLevel2" loop src="assets/music/level2.mp3"></audio>
+
+  <!-- Базовые звуки -->
+  <audio id="sfxJump" src="assets/sfx/jump.wav"></audio>
+  <audio id="sfxCollect" src="assets/sfx/collect.wav"></audio>
+  <audio id="sfxHit" src="assets/sfx/hit.wav"></audio>
+  <audio id="sfxPortal" src="assets/sfx/portal.wav"></audio>
+  <audio id="sfxBossDie" src="assets/sfx/boss-die.wav"></audio>
+
+  <!-- Новые звуки босса -->
+  <audio id="sfxBossRoar" src="assets/sfx/boss-roar.wav"></audio>
+  <audio id="sfxBossStomp" src="assets/sfx/boss-stomp.wav"></audio>
+  <audio id="sfxShockwave" src="assets/sfx/shockwave.wav"></audio>
+
+  <script src="game.js"></script>
+</body><audio id="bossSong" loop preload="auto"
+src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5b3f1e4c6b.mp3?filename=epic-battle-113194.mp3"></audio>
